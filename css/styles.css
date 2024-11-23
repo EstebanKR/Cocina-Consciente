@@ -1,0 +1,865 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-primary: #a2efff;
+    --color-secondary: #63e2ff;
+    --color-tertiary: #f6716e;
+    --rounded-xl: 40px;
+    --rounded-lg: 30px;
+    --rounded-md: 15px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f2f5f8;
+}
+.card-category img {
+    border-radius: 20px;  /* Agrega el border-radius aquí */
+    position: relative;
+}
+
+.btn {
+    background-color: #000;
+    color: #fff;
+    font-family: inherit;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    padding: 20px 70px;
+    border-radius: var(--rounded-md);
+    transition: all 0.3s ease-in-out; 
+}
+
+@media (max-width: 768px) {
+    .btn {
+        padding: 20px 40px; 
+    }
+}
+
+h2 {
+    font-size: 45px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        text-align: center;
+        font-size: 35px; 
+        line-height: 40px; 
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo a {
+    font-family: "Lobster", sans-serif;
+    color: black;
+    font-size: 30px;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width:1024px){
+    header {
+        margin: 0 20px;
+    }
+}
+@media (max-width:1024px){
+    header {
+        margin: 0 15px;
+    }
+}
+
+
+header {
+    border-bottom: 1px solid #f3f2f4;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.navigation-header {
+    display: flex;
+    gap: 40px;
+}
+
+.navigation-header a {
+    color: black;
+    font-weight: 500;
+}
+
+.navigation-header a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    gap: 25px;
+}
+
+.social-links li {
+    list-style: none;
+}
+
+.social-links a {
+    color: black;
+}
+
+.social-links i {
+    font-size: 22px;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 30px;
+    }
+
+    .social-links {
+        display: none;
+    }
+
+    .navigation-header {
+        display: none;
+    }
+}
+
+/* Mobile Menu */
+.menu-mobile {
+    display: none;
+    clip-path: circle(0% at top left);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: clip-path 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.menu-mobile.active {
+    display: flex;
+    clip-path: circle(150% at top left);
+}
+
+.menu-mobile .btn-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.menu-mobile .logo a {
+    font-size: 40px;
+}
+
+.menu-mobile .navigation-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-mobile .social-links {
+    display: flex;
+    gap: 30px;
+}
+
+.menu-mobile .social-links i {
+    font-size: 26px;
+}
+
+@media (max-width: 768px) {
+    .navigation-header {
+        display: none;
+    }
+}
+
+/* Hero Banner Section */
+.section-banner-hero {
+    display: flex;
+    gap: 30px;
+    background-color: var(--color-primary);
+    border-radius: var(--rounded-xl);
+    overflow: hidden;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.section-banner-hero .content {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.section-banner-hero h1 {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 55px;
+}
+
+.section-banner-hero p {
+    color: #333;
+    line-height: 24px;
+    padding-right: 35px;
+    margin: 10px 0 30px;
+}
+
+.section-banner-hero .badges {
+    align-self: center;
+    display: flex;
+    gap: 40px;
+}
+
+.section-banner-hero .badges span {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 700;
+    font-size: 14px;
+    background-color: #9ae3f2;
+    padding: 8px 20px;
+    border-radius: 1000px;
+    line-height: 0;
+}
+
+.section-banner-hero .badges i {
+    font-size: 16px;
+}
+
+.section-banner-hero button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 20px 50px;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: var(--rounded-md);
+    font-family: inherit;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.section-banner-hero .badges-hot-recipes {
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 1000px;
+    letter-spacing: -0.5px;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.section-banner-hero .container-img {
+    flex: 1;
+    max-width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-banner-hero .container-img img {
+    width: 100%;  
+    height: auto; 
+    object-fit: cover; 
+    border-radius: var(--rounded-xl); 
+}
+
+
+@media (max-width: 768px) {
+    .section-banner-hero {
+        flex-direction: column;
+    }
+
+    .section-banner-hero .content {
+        padding: 20px; 
+    }
+
+    .section-banner-hero .container-img img {
+        width: 100%; 
+        height: 300px; 
+        object-fit: cover; 
+    }
+}
+
+.section-categories{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin-bottom: 100px;
+}
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+.btn-all-categories{
+    text-decoration: none;
+    background-color: var(--color-primary);
+    color:#000;
+    font-weight: 600;
+    padding: 15px 25px;
+    border-radius: var(--rounded-md);
+}
+
+.list-card-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center;
+}
+
+.card-category {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-end;
+    flex-direction: column;
+    flex: 1;
+    padding-bottom: 50px;
+    position: relative;
+    height: 200px;
+    border-radius: var(--rounded-lg);
+    cursor: pointer;
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-category img {
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: -60px;
+    transition: all 0.3s ease-in;
+}
+
+.card-category:hover img {
+    top: -80px;
+}
+
+.card-category p {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+
+.card-category.breakfast {
+    background: radial-gradient(circle, #cdd6b315 0%, #44573015 100%);
+}
+
+.card-category.vegan {
+    background: radial-gradient(circle, #ced9ad15 0%, #649f2915 100%);
+}
+
+.card-category.desert {
+    background: radial-gradient(circle, #ffef7315 0%, #f5970015 100%);
+}
+
+.card-category.salad {
+    background: radial-gradient(circle, #9a5d4630 0%, #87462f15 100%);
+}
+.card-category.lunch {
+    background: radial-gradient(circle, #9a5d4630 0%, #87462f15 100%);
+}
+
+@media (max-width: 1024px) {
+    .list-card-categories {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 768px) {
+    .list-card-categories {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .list-card-categories {
+        grid-template-columns: 1fr; 
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+main h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+main p {
+    width: 75%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: #474d50;
+}
+
+.list-card-recipes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.card-recipes {
+    padding: 0 10px;
+    border-radius: var(--rounded-md);
+    background: linear-gradient(to bottom, #fff 25%, #ecfafe);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-recipes .container-img {
+    position: relative;
+}
+
+.card-recipes .container-img img {
+    width: 100%;
+    height: 215px;
+    object-fit: cover;
+    border-radius: var(--rounded-md);
+    transition: all 3s ease-in-out;
+}
+
+.container-img{
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--rounded-md);}
+
+
+    img {
+        width: 100%;
+        height: 215px;
+        object-fit: cover;
+        border-radius: var(--rounded-md);
+        transition: all 0.3s ease-in-out;
+    }
+    
+    img:hover {
+        transform: scale(1.18);
+    }
+    
+    
+    .btn-favorite {
+        background-color: white;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .btn-favorite i {
+        font-size: 16px;
+        color: #dbe1e6;
+        transition: all 0.3s;
+    }
+    
+    .btn-favorite i.active {
+        color: #fc6260;
+    }
+    
+    @media (hover: hover) and (pointer: fine) {
+        .btn-favorite:hover i {
+            color: #fc6260;
+        }
+    }
+    
+    
+    .footer {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+    }
+    @media (max-width: 768px) {
+        img {
+            height: 180px;
+        }
+    
+        .btn-favorite {
+            width: 25px;
+            height: 25px;
+            top: 10px;
+            right: 10px;
+        }
+    
+        .btn-favorite i {
+            font-size: 14px;
+        }
+    
+        .footer {
+            gap: 20px; 
+        }
+    }
+    
+    
+    @media (max-width: 480px) {
+        img {
+            height: 150px; }
+    
+        .btn-favorite {
+            width: 20px;
+            height: 20px;
+            top: 8px;
+            right: 8px;
+        }
+    
+        .btn-favorite i {
+            font-size: 12px;
+        }
+    
+        .footer {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px; 
+        }
+    }
+
+.card-recipes .container-img .btn-favorite {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #f00;
+}
+
+.card-recipes .content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.card-recipes .footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #666;
+}
+
+.card-recipes .footer .time,
+.card-recipes .footer .category {
+    display: flex;
+    align-items: center;
+}
+
+.card-recipes .footer .time i,
+.card-recipes .footer .category i {
+    margin-right: 5px;
+}
+
+.card-message {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.card-message p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #474d50;
+}
+
+.card-message img {
+    width: 100px;
+    margin-top: 20px;
+}
+
+@media(max-width: 768px) {
+    main p {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .list-card-recipes {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card-recipes {
+        padding: 0 5px;
+    }
+
+    .card-message img {
+        width: 80px;
+    }
+}
+
+
+    .section-chef {
+        display: flex;
+        align-items: center;
+        margin-top: 130px;
+    }
+
+    /* Contenido de la sección del chef */
+    .section-chef .content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        flex: 1;
+    }
+
+    /* Botón en la sección del chef */
+    .section-chef .content button {
+        align-self: flex-start;
+    }
+
+    /* Contenedor de imagen en la sección del chef */
+    .section-chef .container-img {
+        flex: 1;
+    }
+
+    /* Imagen en la sección del chef */
+    .section-chef .container-img img {
+        width: 100%;
+    }
+
+    /* Estilos Responsivos para pantallas pequeñas (hasta 768px) */
+    @media (max-width: 768px) {
+        .section-chef {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .section-chef h2 {
+            font-size: 35px;
+            text-align: center;
+            line-height: 35px;
+        }
+
+        .section-chef .content {
+            width: 70%;
+            align-items: center;
+        }
+
+        .section-chef .content button {
+            align-self: center;
+        }
+
+        .section-chef .container-img {
+            order: -1;
+        }
+
+        .section-chef .container-img img {
+            height: 200px;
+        }
+    }
+    .section-post-instragram {
+        background: linear-gradient(to bottom, #fff 25%, #ecfafe);
+        padding: 20px 0 40px 0;
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: center; /* Centra el contenido en el eje horizontal */
+    }
+    
+    .section-instragram {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Asegura que el contenido se centre en el eje vertical */
+        text-align: center; /* Alinea todo el texto al centro */
+        width: 100%; /* Para que ocupe todo el ancho disponible */
+        max-width: 1200px; /* Limita el ancho máximo del contenido */
+        padding: 0 20px; /* Para evitar que el contenido toque los bordes */
+    }
+    
+    .section-instragram h2 {
+        width: 80%;
+        line-height: 55px;
+    }
+    
+    .section-instragram h2 span {
+        color: var(--color-tertiary);
+    }
+    
+    .section-instragram p {
+        width: 60%;
+        font-size: 16px;
+    }
+    
+    .list-post-instagram {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+        margin-top: 30px;
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    }
+    
+    .list-post-instagram .card-img img {
+        width: 100%;
+        object-fit: cover; /* Asegura que la imagen cubra completamente su contenedor */
+    }
+    
+    @media (max-width: 768px) {
+        .section-instragram {
+            margin-bottom: 0;
+            padding: 0 10px;
+        }
+    
+        .section-instragram p {
+            width: 100%;
+            font-size: 14px;
+        }
+    
+        .list-post-instagram {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            padding: 0 10px;
+        }
+    
+        .list-post-instagram::-webkit-scrollbar {
+            display: none;
+        }
+    
+        .list-post-instagram .card-img {
+            flex: 0 0 80%;
+            scroll-snap-align: center;
+        }
+    
+        .list-post-instagram .card-img img {
+            object-fit: contain;
+        }
+    }
+
+    .section-newsletter {
+        margin: 120px auto;
+        height: 550px;
+        background-color: var(--color-primary); /* Utiliza la variable para el fondo */
+        border-radius: var(--rounded-xl);
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .section-newsletter p {
+        width: 60%;
+        text-align: center;
+    }
+    
+    .container-input {
+        display: flex;
+        gap: 30px;
+        padding: 10px;
+        border-radius: 15px;
+        background-color: white;
+        width: 700px;
+        margin-top: 40px;
+    }
+    
+    .container-input input {
+        flex: 1;
+        border: none;
+        outline: none;
+        font-weight: 500;
+        margin-left: 35px;
+        font-family: inherit;
+    }
+    /* Estilo para el footer */
+.footer {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-content {
+    margin-bottom: 20px;
+  }
+  
+  .footer-links {
+    margin-bottom: 20px;
+  }
+  
+  .footer-links a {
+    margin: 0 15px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .footer-links a:hover {
+    color: #5f5f5f;
+  }
+  
+  .footer-socials {
+    margin-top: 20px;
+  }
+  
+  .footer-socials a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .footer-socials a:hover {
+    color: #5f5f5f;
+  }
+  
+  .footer-socials p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
