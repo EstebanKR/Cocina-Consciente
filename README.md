@@ -1,6 +1,6 @@
 # Cocina Consciente
 Proyecto Cocina Consiente 4to semestre, creación de aplicaciones Web 
-
+Link de Repositorio https://github.com/EstebanKR/Cocina-Consciente/tree/main
 Una plataforma que promueve una alimentación saludable y sostenible, educando y empoderando a los usuarios para adoptar hábitos alimenticios que beneficien su bienestar y el planeta.
 
 ## Descripción del Proyecto
